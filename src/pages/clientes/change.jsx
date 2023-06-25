@@ -5,18 +5,6 @@ import Layout from '@/hocs/Layout';
 import { useRouter } from 'next/router';
 import ConfirmationModal from './Modal';
 
-const SeoList = {
-  title: 'SKYNET - Administrador de servicios',
-  description: 'Selecciona la opción que te corresponda.',
-  href: '/',
-  url: 'https://skynet.com',
-  keywords: '',
-  robots: 'all',
-  author: 'NelsonBrenes',
-  publisher: 'NelsonBrenes',
-  image: '',
-  twitterHandle: '@jakebcalderon',
-};
 
 const mapContainerStyle = {
   width: '100%',

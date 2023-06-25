@@ -3,19 +3,6 @@ import Head from 'next/head';
 import Layout from '@/hocs/Layout';
 import Link from 'next/link';
 
-const SeoList = {
-  title: 'SKYNET - Administrador de servicios',
-  description: 'Selecciona la opción que te corresponda.',
-  href: '/',
-  url: 'https://skynet.com',
-  keywords: '',
-  robots: 'all',
-  author: 'NelsonBrenes',
-  publisher: 'NelsonBrenes',
-  image: '',
-  twitterHandle: '@jakebcalderon',
-};
-
 
 export default function Home() {
   const [visitas, setVisitas] = useState([]);

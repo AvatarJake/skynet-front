@@ -4,21 +4,6 @@ import Layout from '@/hocs/Layout';
 //import Features from './components/Features';
 //import Roadmap from './components/Roadmap';
 
-const SeoList = {
-  title: 'SKYNET - Administrador de servicios',
-  description:
-    'Selecciona la opcion que te corrsponda.',
-  href: '/',
-  url: 'https://skynet.com',
-  keywords:
-    '',
-  robots: 'all',
-  author: 'NelsonBrenes',
-  publisher: 'NelsonBrenes ',
-  image:'',
-  twitterHandle: '@jakebcalderon',
-};
-
 export default function Home() {
   return (
     <>
