@@ -16,7 +16,7 @@ export default function DeletePage() {
   useEffect(() => {
     if (id) {
       console.log('ID:', id);
-      fetch(`http://msclientesapi.azurewebsites.net/clientes/clientes/${id}`)
+      fetch(`https://msclientesapi.azurewebsites.net/clientes/clientes/${id}`)
         .then((response) => response.json())
         .then((data) => {
           setCliente(data);
@@ -27,7 +27,7 @@ export default function DeletePage() {
   }, []);
 
   const handleDelete = () => {
-    fetch(`http://msclientesapi.azurewebsites.net/clientes/clientes/${id}`, {
+    fetch(`https://msclientesapi.azurewebsites.net/clientes/clientes/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'

@@ -49,7 +49,7 @@ export default function Home() {
 
     console.log('Datos a enviar:', formData);
 
-    fetch("http://msloginapi.azurewebsites.net/auth/users/", {
+    fetch("https://msloginapi.azurewebsites.net/auth/users/", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

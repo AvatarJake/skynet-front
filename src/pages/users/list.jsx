@@ -19,7 +19,7 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      fetch('http://msloginapi.azurewebsites.net/auth/users/', {
+      fetch('https://msloginapi.azurewebsites.net/auth/users/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

@@ -45,7 +45,7 @@ export default function Home() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     try {
-      fetch('http://msloginapi.azurewebsites.net/auth/users/', {
+      fetch('https://msloginapi.azurewebsites.net/auth/users/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ export default function Home() {
     }
 
     try {
-      fetch("http://msclientesapi.azurewebsites.net/clientes/clientes/")
+      fetch("https://msclientesapi.azurewebsites.net/clientes/clientes/")
         .then((response) => response.json())
         .then((data) => setClientes(data));
         
@@ -110,7 +110,7 @@ export default function Home() {
     };
     
 
-    fetch('http://msvisitasapi.azurewebsites.net/visitas/visitas/', {
+    fetch('https://msvisitasapi.azurewebsites.net/visitas/visitas/', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'

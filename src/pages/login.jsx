@@ -23,7 +23,7 @@ const LoginForm = () => {
 
     // Realizar la solicitud de inicio de sesión al backend
     try {
-      const response = await fetch('http://msloginapi.azurewebsites.net/auth/token/login/', {
+      const response = await fetch('https://msloginapi.azurewebsites.net/auth/token/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const LoginForm = () => {
         setToken(token);
 
         //aqui obtenemos los datos del usuario logeado para realizar validaciones
-    const responseUser = await fetch('http://msloginapi.azurewebsites.net/auth/users/me/', {
+    const responseUser = await fetch('https://msloginapi.azurewebsites.net/auth/users/me/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

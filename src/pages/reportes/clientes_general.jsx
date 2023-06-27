@@ -17,7 +17,7 @@ class PDFGenerator extends React.Component {
     const token = localStorage.getItem('token');
 
     if (token) {
-      fetch('http://msclientesapi.azurewebsites.net/clientes/clientes/', {
+      fetch('https://msclientesapi.azurewebsites.net/clientes/clientes/', {
         headers: {
           'Content-Type': 'application/json',
         },

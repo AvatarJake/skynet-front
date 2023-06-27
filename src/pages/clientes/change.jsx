@@ -38,7 +38,7 @@ export default function ClientesChange() {
   useEffect(() => {
     if (id) {
       console.log('ID:', id);
-      fetch(`http://msclientesapi.azurewebsites.net/clientes/clientes/${id}`)
+      fetch(`https://msclientesapi.azurewebsites.net/clientes/clientes/${id}`)
         .then((response) => response.json())
         .then((data) => {
           setCliente((data));

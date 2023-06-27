@@ -51,7 +51,7 @@ export default function VisitasChange() {
   useEffect(() => {
     if (id) {
       console.log('ID:', id);
-      fetch(`http://msvisitasapi.azurewebsites.net/visitas/visitas/${id}`)
+      fetch(`https://msvisitasapi.azurewebsites.net/visitas/visitas/${id}`)
         .then((response) => response.json())
         .then((data) => {
           setVisita((data));
@@ -72,7 +72,7 @@ export default function VisitasChange() {
     useEffect(() => {
       const token = localStorage.getItem('token');
       try {
-        fetch('http://msloginapi.azurewebsites.net/auth/users/', {
+        fetch('https://msloginapi.azurewebsites.net/auth/users/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ export default function VisitasChange() {
       }
   
       try {
-        fetch("http://msclientesapi.azurewebsites.net/clientes/clientes/")
+        fetch("https://msclientesapi.azurewebsites.net/clientes/clientes/")
           .then((response) => response.json())
           .then((data) => setClientes(data));
           
