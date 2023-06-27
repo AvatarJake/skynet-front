@@ -10,7 +10,7 @@ const ProtectedRoute = ({ children }) => {
     // Verificar si no hay un token válido
     if (!token) {
       // Redirigir al usuario a la página de inicio de sesión
-      router.push('/');
+      router.push('/index');
     }
   }, []);
 
