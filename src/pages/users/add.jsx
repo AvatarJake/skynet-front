@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '@/hocs/Layout';
-import ConfirmationModal from '/Modal';
+import ConfirmationModal from './modal';
 import moment from 'moment';
 // import Header from './components/Header';
 // import Features from './components/Features';

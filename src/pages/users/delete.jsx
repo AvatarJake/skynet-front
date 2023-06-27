@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Layout from '@/hocs/Layout';
 import { useRouter } from 'next/router';
-import ConfirmationModal from './Modal';
+import ConfirmationModal from './modal';
 
 export default function DeletePage() {
   const router = useRouter();
