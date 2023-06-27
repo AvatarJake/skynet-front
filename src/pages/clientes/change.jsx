@@ -3,7 +3,7 @@ import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import Head from 'next/head';
 import Layout from '@/hocs/Layout';
 import { useRouter } from 'next/router';
-import ConfirmationModal from './Modal';
+import ConfirmationModal from './modal';
 
 
 const mapContainerStyle = {
