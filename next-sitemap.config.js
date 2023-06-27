@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://skynet.onrender.com',
+  siteUrl: process.env.SITE_URL || 'https://sysskynet.azurewebsites.net/',
   generateRobotsTxt: true,
   changefreq: 'daily',
   priority: 0.7,

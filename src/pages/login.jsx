@@ -6,7 +6,7 @@ const LoginForm = () => {
   const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [token, setToken] = useState('');
+  const [token, setToken] = useState(null);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [role, setRole] = useState('');
@@ -43,7 +43,7 @@ const LoginForm = () => {
         setToken(token);
 
         //aqui obtenemos los datos del usuario logeado para realizar validaciones
-    const responseUser = await fetch('http://127.0.0.1:8000/auth/users/me/', {
+    const responseUser = await fetch('http://msloginapi.azurewebsites.net/auth/users/me/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
