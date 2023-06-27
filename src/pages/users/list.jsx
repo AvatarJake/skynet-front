@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Layout from '@/hocs/Layout';
-import Link from 'next/link';
+
 
 export default function Home() {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const token = localStorage.getItem('token');
+  const token = typeof localStorage !== 'undefined' ? localStorage.getItem('token') : '';
+
 
     if (token) {
       // Realiza las acciones necesarias con el token
@@ -107,6 +108,6 @@ export default function Home() {
   );
 }
 
-Home.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
+Home.getLayout = function getLayout(index) {
+  return <Layout>{index}</Layout>;
 };

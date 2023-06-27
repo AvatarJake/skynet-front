@@ -4,7 +4,7 @@ import Layout from '@/hocs/Layout';
 //import Features from './components/Features';
 //import Roadmap from './components/Roadmap';
 
-export default function Home() {
+export default function Index() {
   
 
 
@@ -20,6 +20,6 @@ export default function Home() {
   );
 }
 
-Home.getLayout = function getLayout(page) {
+Index.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };
