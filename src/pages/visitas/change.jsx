@@ -51,7 +51,7 @@ export default function VisitasChange() {
   useEffect(() => {
     if (id) {
       console.log('ID:', id);
-      fetch(`http://127.0.0.1:8002/visitas/visitas/${id}`)
+      fetch(`http://msvisitasapi.azurewebsites.net/visitas/visitas/${id}`)
         .then((response) => response.json())
         .then((data) => {
           setVisita((data));
@@ -72,7 +72,7 @@ export default function VisitasChange() {
     useEffect(() => {
       const token = localStorage.getItem('token');
       try {
-        fetch('http://127.0.0.1:8000/auth/users/', {
+        fetch('http://msloginapi.azurewebsites.net/auth/users/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ export default function VisitasChange() {
       }
   
       try {
-        fetch("http://127.0.0.1:8001/clientes/clientes/")
+        fetch("http://msclientesapi.azurewebsites.net/clientes/clientes/")
           .then((response) => response.json())
           .then((data) => setClientes(data));
           
@@ -138,8 +138,6 @@ export default function VisitasChange() {
     console.log('se ejecuta la limpieza')
   }
 
-  
-    
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -157,7 +155,7 @@ export default function VisitasChange() {
       location,
     };
     
-    fetch(`http://127.0.0.1:8002/visitas/visitas/${id}/change/`, {
+    fetch(`http://msvisitasapi.azurewebsites.net/visitas/visitas/${id}/change/`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'

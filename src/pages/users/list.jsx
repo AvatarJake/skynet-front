@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      fetch('http://127.0.0.1:8000/auth/users/', {
+      fetch('http://msloginapi.azurewebsites.net/auth/users/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +39,8 @@ export default function Home() {
 
   const filteredUsers = users.filter((user) =>
     user.first_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.last_name.toLowerCase().includes(searchTerm.toLowerCase())
+    user.last_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.role.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -52,6 +53,7 @@ export default function Home() {
           }
           .table-container {
             overflow-x: auto;
+            text-align: center
           }
           table {
             width: 100%;
@@ -81,24 +83,20 @@ export default function Home() {
         <table>
           <thead>
             <tr>
-              <th>Nombres</th>
-              <th>Apellidos</th>
-              <th>Acciones</th>
+              <th>Nombre</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th>No hay acciones</th>
             </tr>
           </thead>
           <tbody>
             {filteredUsers.map((user) => (
               <tr key={user.id}>
-                <td>{user.first_name}</td>
-                <td>{user.last_name}</td>
+                <td>{user.first_name + ' ' +user.last_name}</td>
+                <td>{user.role}</td>
+                <td>{user.is_active ? 'Activo' : 'Inactivo'}</td>
                 <td>
-                  <Link href={`/users/change?id=${user.id}`} passHref>
-                    Modificar
-                  </Link>
-                  <td></td>
-                  <Link href={`/users/delete?id=${user.id}`} passHref>
-                    Eliminar
-                  </Link>
+                  
                 </td>
               </tr>
             ))}

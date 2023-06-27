@@ -23,7 +23,7 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      fetch("http://127.0.0.1:8001/clientes/clientes/")
+      fetch("http://msclientesapi.azurewebsites.net/clientes/clientes/")
         .then((response) => response.json())
         .then((data) => setClientes(data));
     } catch (error) {

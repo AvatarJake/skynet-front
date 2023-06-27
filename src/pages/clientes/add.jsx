@@ -69,7 +69,7 @@ export default function Home() {
 
     console.log('Datos a enviar:', formData);
 
-    fetch('http://127.0.0.1:8001/clientes/clientes/', {
+    fetch('http://msclientesapi.azurewebsites.net/clientes/clientes/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

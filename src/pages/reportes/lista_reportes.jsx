@@ -35,8 +35,7 @@ export default function Reportes() {
             </div>
             <div class="barra-superior">
                 <a href="/reportes/visitas_general/" class="boton_reporte">Visitas general</a>
-                <a href="http://127.0.0.1:8001/admin/" class="boton_reporte">Listado de Visitas por fecha</a>
-                <a href="http://127.0.0.1:8001/admin/" class="boton_reporte">Listado de Visitas por Usuario</a>
+ 
                 
             </div>   
         </div>

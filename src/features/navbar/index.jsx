@@ -101,6 +101,7 @@ export default function Navbar() {
 
   const handleLogout = () => {
     localStorage.setItem('token', '');
+    localStorage.setItem('role', '');
   };
   
   
@@ -452,9 +453,9 @@ export default function Navbar() {
       </div>
       {(role==='Admin' || role === 'administrador') &&(
       <div class="barra-superior">
-      <a href="http://127.0.0.1:8000/admin/" class="boton">Administración de Usuarios</a>
-      <a href="http://127.0.0.1:8001/admin/" class="boton">Administración de Clientes</a>
-      <a href="http://127.0.0.1:8002/admin/" class="boton">Administración de Visitas</a>
+      <a href="https://msloginapi.azurewebsites.net/admin/" class="boton">Administración de Usuarios</a>
+      <a href="https://msclientesapi.azurewebsites.net/admin/" class="boton">Administración de Clientes</a>
+      <a href="https://msvisitasapi.azurewebsites.net/admin/" class="boton">Administración de Visitas</a>
     </div> 
   )} 
     </header>

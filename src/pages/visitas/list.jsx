@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Layout from '@/hocs/Layout';
 import Link from 'next/link';
 
-
 export default function Home() {
   const [visitas, setVisitas] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -24,7 +23,7 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      fetch("http://127.0.0.1:8002/visitas/visitas/")
+      fetch("http://msvisitasapi.azurewebsites.net/visitas/visitas/")
         .then((response) => response.json())
         .then((data) => setVisitas(data));
     } catch (error) {

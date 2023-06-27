@@ -38,7 +38,7 @@ export default function ClientesChange() {
   useEffect(() => {
     if (id) {
       console.log('ID:', id);
-      fetch(`http://127.0.0.1:8001/clientes/clientes/${id}`)
+      fetch(`http://msclientesapi.azurewebsites.net/clientes/clientes/${id}`)
         .then((response) => response.json())
         .then((data) => {
           setCliente((data));
@@ -82,7 +82,7 @@ export default function ClientesChange() {
       location: markerPosition ? `${markerPosition.lat}, ${markerPosition.lng}` : ''
     };
     
-    fetch(`http://127.0.0.1:8001/clientes/clientes/${id}/change/`, {
+    fetch(`http://msclientesapi.azurewebsites.net/clientes/clientes/${id}/change/`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'

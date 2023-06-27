@@ -23,7 +23,7 @@ const LoginForm = () => {
 
     // Realizar la solicitud de inicio de sesión al backend
     try {
-      const response = await fetch('http://127.0.0.1:8000/auth/token/login/', {
+      const response = await fetch('http://msloginapi.azurewebsites.net/auth/token/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
