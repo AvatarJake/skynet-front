@@ -103,6 +103,7 @@ export default function Navbar() {
     localStorage.setItem('token', null);
     localStorage.setItem('user', null);
     localStorage.setItem('role', null);
+    setToken(null)
   };
   
   
