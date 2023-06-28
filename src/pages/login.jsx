@@ -60,12 +60,13 @@ const LoginForm = () => {
       
       const lastName = userData.last_name;
       const role = userData.role;
+      localStorage.setItem('user', userData.first_name)
+      localStorage.setItem('role', userData.role)
       console.log('Nombre de usuario:', firstName, lastName);
       console.log('Tipo de Usuario:', role);
 
       //se almacenan los datos del usuario actual en las variables locales
-      localStorage.setItem('user', firstName)
-      localStorage.setItem('role', role)
+      
     } else {
       // Error al obtener los datos del usuario, manejar el error de acuerdo a tus necesidades
       console.log('Error al obtener los datos del usuario');
