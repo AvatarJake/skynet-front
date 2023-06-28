@@ -1,5 +1,4 @@
 .yarn
 .next
 dist
-node_modules
-.env.local
+node_moduless
