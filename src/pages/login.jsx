@@ -60,8 +60,8 @@ const LoginForm = () => {
       
       const lastName = userData.last_name;
       const role = userData.role;
-      localStorage.setItem('user', userData.first_name)
-      localStorage.setItem('role', userData.role)
+      localStorage.setItem('user', firstName)
+      localStorage.setItem('role', role)
       console.log('Nombre de usuario:', firstName, lastName);
       console.log('Tipo de Usuario:', role);
 

@@ -79,7 +79,7 @@ export default function Navbar() {
   
   const router = useRouter();
   const [token, setToken]= useState('');
-  const [user, setUser] = useState('');
+  const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [role, setRole] = useState('');
 
@@ -92,7 +92,7 @@ export default function Navbar() {
     console.log('nombresito:' , firstName)
     console.log('que hace:' , role)
     setRole(role)
-    setUser(firstName)
+    setFirstName(firstName)
     
   })
 
@@ -103,9 +103,10 @@ export default function Navbar() {
     localStorage.setItem('token', null);
     localStorage.setItem('user', null);
     localStorage.setItem('role', null);
-    setToken(null)
-    setUser(null)
-    setRole(null)
+    setToken(null);
+    setFirstName(null);
+    setRole(null);
+
   };
   
   
