@@ -206,6 +206,27 @@ select:focus {
   margin-bottom: 20px;
 }
 
+.login-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+.login-button:focus {
+  outline: none;
+}
+
 .form-group {
   margin-bottom: 15px;
 }

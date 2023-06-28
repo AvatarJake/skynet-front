@@ -108,7 +108,7 @@ const LoginForm = () => {
         />
       </div>
       {error && <div className="error">{error}</div>}
-      <button type="submit">Iniciar sesión</button>
+      <button type="submit" class="login-button">Iniciar sesión</button>
     </form>
   );
 };
