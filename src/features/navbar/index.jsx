@@ -100,8 +100,9 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleLogout = () => {
-    localStorage.setItem('token', '');
-    localStorage.setItem('role', '');
+    localStorage.setItem('token', null);
+    localStorage.setItem('user', null);
+    localStorage.setItem('role', null);
   };
   
   
