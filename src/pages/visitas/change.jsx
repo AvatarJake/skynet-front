@@ -155,7 +155,7 @@ export default function VisitasChange() {
       location,
     };
     
-    fetch(`http://msvisitasapi.azurewebsites.net/visitas/visitas/${id}/change/`, {
+    fetch(`https://msvisitasapi.azurewebsites.net/visitas/visitas/${id}/change/`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'

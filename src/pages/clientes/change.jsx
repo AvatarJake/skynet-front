@@ -82,7 +82,7 @@ export default function ClientesChange() {
       location: markerPosition ? `${markerPosition.lat}, ${markerPosition.lng}` : ''
     };
     
-    fetch(`http://msclientesapi.azurewebsites.net/clientes/clientes/${id}/change/`, {
+    fetch(`https://msclientesapi.azurewebsites.net/clientes/clientes/${id}/change/`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'

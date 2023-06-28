@@ -102,6 +102,7 @@ export default function Navbar() {
   const handleLogout = () => {
     localStorage.setItem('token', '');
     localStorage.setItem('role', '');
+    localStorage.setItem('user', '')
   };
   
   
