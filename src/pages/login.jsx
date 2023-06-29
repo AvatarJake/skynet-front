@@ -10,6 +10,7 @@ const LoginForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [role, setRole] = useState('');
+  const [user, setUser] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
@@ -37,13 +38,7 @@ const LoginForm = () => {
         const token = data.token;
         console.log('Inicio de sesión exitoso');
         localStorage.setItem('token', token);
-        router.push('/');
-        console.log('Token:', token);
-        // Realiza las acciones necesarias con el token (por ejemplo, almacenarlo en el estado o en el almacenamiento local)
-        setToken(token);
-
-        //aqui obtenemos los datos del usuario logeado para realizar validaciones
-    const responseUser = await fetch('https://msloginapi.azurewebsites.net/auth/users/me/', {
+        const responseUser = await fetch('https://msloginapi.azurewebsites.net/auth/users/me/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -71,6 +66,13 @@ const LoginForm = () => {
       // Error al obtener los datos del usuario, manejar el error de acuerdo a tus necesidades
       console.log('Error al obtener los datos del usuario');
     }
+        router.push('/');
+        console.log('Token:', token);
+        // Realiza las acciones necesarias con el token (por ejemplo, almacenarlo en el estado o en el almacenamiento local)
+        setToken(token);
+
+        //aqui obtenemos los datos del usuario logeado para realizar validaciones
+
 
       } else {
         // Error en el inicio de sesión, manejar el error de acuerdo a tus necesidades
