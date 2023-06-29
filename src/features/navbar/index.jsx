@@ -459,7 +459,7 @@ export default function Navbar() {
       </div>
       {(role==='Admin' || role === 'administrador') &&(
       <div class="barra-superior">
-      <a href="https://msloginapi.azurewebsites.net/admin/" class="boton">Administración de Usuarios</a>
+      <a href="https://loginadmina.azurewebsites.net/admin/" class="boton">Administración de Usuarios</a>
       <a href="https://msclientesapi.azurewebsites.net/admin/" class="boton">Administración de Clientes</a>
       <a href="https://msvisitasapi.azurewebsites.net/admin/" class="boton">Administración de Visitas</a>
     </div> 
